@@ -1,11 +1,6 @@
 import ProductsGridItem from "@/app/dashboard/[slug]/productsGridItem";
+import { Product } from "@/types";
 import { faker } from '@faker-js/faker';
-export interface Product {
-  id: string,
-  image: string,
-  title: string,
-  price: string
-}
 
 const generateRandomProduct = () => ({
   id: faker.string.uuid(),
