@@ -1,6 +1,6 @@
 const CheckoutPriceDetails = () => {
   return (
-    <div className="px-6 py-10">
+    <div className="px-6">
       <ul className="mb-4">
         <li className="flex items-center justify-between gap-2 mb-3">
           <span className="text-sm text-slate-400">Sub Total</span>

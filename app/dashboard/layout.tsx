@@ -19,7 +19,7 @@ export default function DashboardLayout({ children }: {
           { children }
         </div>
 
-        <div className="overflow-auto">
+        <div className="min-h-0 height-full">
           <RightSidebar />
         </div>
       </section>

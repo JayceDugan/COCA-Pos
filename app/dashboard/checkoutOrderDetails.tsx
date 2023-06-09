@@ -13,16 +13,16 @@ const CheckoutOrderDetails = () => {
 
   return (
     <div className="px-6 py-0">
-      <h2 className="text-xl font-semibold">Order Details</h2>
+      <h2 className="text-lg font-semibold mb-2">Orders Details</h2>
 
       { lineItemsExist ? (
-        <ul className="h-[325px] overflow-auto">
+        <ul className="h-[321px] overflow-auto">
           <AnimatePresence>
             { checkoutLineItemsList }
           </AnimatePresence>
         </ul>
       ) : (
-        <div className="text-center flex flex-col items-center py-5">
+        <div className="text-center flex flex-col items-center justify-center py-5 h-[318px]">
           <ArchiveBoxIcon className="h-32 w-32 text-slate-300" />
           <p className="text-sm text-slate-400">Order empty, start by selecting a product.</p>
         </div>

@@ -5,15 +5,15 @@ const BuyPanel = () => {
     <div>
       <h2 className="text-xl my-4 font-medium">Customer Information</h2>
 
-      <section className="bg-slate-200 p-1 rounded-full mb-2">
-        <input type="text" className="bg-white p-3 w-full rounded-full border-none outline-none" placeholder="Customer Name" />
+      <section className="bg-slate-100 p-0.5 rounded-full mb-2">
+        <input type="text" className="bg-white py-2 w-full rounded-full border-none outline-none text-sm text-slate-100" placeholder="Customer Name" />
       </section>
 
-      <section className="bg-slate-200 p-1 rounded-full">
-        <input type="text" className="bg-white p-3 w-full rounded-full border-none outline-none" placeholder="Select Table" />
+      <section className="bg-slate-100 p-0.5 rounded-full">
+        <input type="text" className="bg-white py-2 w-full rounded-full border-none outline-none text-sm text-slate-100" placeholder="Select Table" />
       </section>
 
-      <button type="submit" className="bg-orange-100 text-orange-500 rounded-full w-full p-4 font-bold mt-3">
+      <button type="submit" className="bg-orange-100 text-orange-500 rounded-full w-full py-2 font-medium mt-3">
         Add note
       </button>
     </div>
@@ -22,13 +22,13 @@ const BuyPanel = () => {
 
 const RightSidebar = () => {
   return (
-    <div className="w-[360px] h-full border-l border-gray-300 mb-10">
+    <div className="w-[360px] h-full border-l border-gray-300 mb-10 grid grid-rows-[auto_auto_1fr_min-content] overflow-hidden">
       <div className="px-6 py-4">
-        <section className="bg-slate-200 rounded-3xl grid grid-cols-2 p-2">
-          <button className="rounded-3xl bg-white py-2">
+        <section className="bg-slate-100 rounded-3xl grid grid-cols-2 p-1">
+          <button className="rounded-3xl bg-white py-1 text-sm">
             Buy
           </button>
-          <button className="rounded-3xl py-2">
+          <button className="rounded-3xl py-2 text-sm">
             Reservation
           </button>
         </section>
@@ -36,12 +36,16 @@ const RightSidebar = () => {
         <BuyPanel />
       </div>
 
-      <div className="w-full h-0.5 bg-slate-200 mb-4" />
+      <div className="w-full h-0.5 bg-slate-100 mb-4" />
 
       <CheckoutOrderDetails />
-      <CheckoutPriceDetails />
-      <div className="px-3">
-        <button className="h-[48px] bg-orange-500 w-full px-6 py-4 rounded-full text-white leading-3">Pay Now</button>
+
+      <div className="min-h-[296px] pt-4">
+        <CheckoutPriceDetails />
+
+        <div className="px-3 mt-6">
+          <button className="h-[48px] bg-orange-500 w-full px-6 py-4 rounded-full text-white leading-3">Pay Now</button>
+        </div>
       </div>
     </div>
   )

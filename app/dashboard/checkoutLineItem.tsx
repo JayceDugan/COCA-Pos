@@ -34,14 +34,14 @@ const CheckoutLineItem: React.FC<CheckoutLineItemProps> = (product) => {
 
           <div className="flex self-end justify-end items-center gap-3">
             <button
-              className="rounded-full text-xl bg-slate-200 h-[36px] w-[36px] flex items-center justify-center text-slate-600 leading-none"
+              className="rounded-full text-xl bg-slate-200 h-[33px] w-[33px] flex items-center justify-center text-slate-600 leading-none"
               onClick={() => dispatch(decrementLineItemQuantity(product))}
             >
               -
             </button>
             { product.quantity }
             <button
-              className="rounded-full text-xl bg-slate-800 h-[36px] w-[36px] flex items-center justify-center text-white leading-none"
+              className="rounded-full text-xl bg-slate-800 h-[33px] w-[33px] flex items-center justify-center text-white leading-none"
               onClick={() => dispatch(incrementLineItemQuantity(product))}
             >
               +

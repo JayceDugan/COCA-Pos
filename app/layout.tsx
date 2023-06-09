@@ -17,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + ' fixed h-screen w-screen'}>
-        <Providers>{ children }</Providers>
+        <Providers>
+          { children }
+        </Providers>
       </body>
     </html>
   )
