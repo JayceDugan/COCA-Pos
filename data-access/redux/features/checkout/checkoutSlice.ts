@@ -1,6 +1,7 @@
 import { RootState } from "@/data-access/redux/store";
 import { Product } from "@/types";
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { HYDRATE } from "next-redux-wrapper";
 
 export interface CheckoutLineItem extends Product {
   quantity: number,
@@ -63,9 +64,18 @@ const checkoutSlice = createSlice({
         delete state.lineItems[action.payload.id];
       }
     }
+  },
+  extraReducers: {
+    [HYDRATE]: (state, action ) => {
+      console.log('HYDRATE', state, action.payload);
+      return {
+        ...state,
+        ...action.payload.checkout,
+      };
+    }
   }
 })
 
 export const { setId, setCustomerName, setNote, addLineItem, incrementLineItemQuantity, decrementLineItemQuantity} = checkoutSlice.actions;
 export const selectCheckoutLineItems = (state: RootState) => state.checkout.lineItems;
-export default checkoutSlice.reducer;
+export default checkoutSlice;

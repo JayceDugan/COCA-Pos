@@ -30,7 +30,7 @@ const navigationItems = [
   },
 ]
 
-const NavigationItems = navigationItems.map((item) => <NavigationItem { ...item } />);
+const NavigationItems = navigationItems.map((item) => <NavigationItem key={`navigation-item-${item.label}`} { ...item } />);
 
 const Navigation = () => {
   return (

@@ -1,9 +1,18 @@
+"use client";
+
 import LoginForm from "@/app/login/loginForm";
 import Logo from "@/app/Logo";
+import { currentUserIsAuthenticated } from "@/data-access/redux/features/currentUser/currentUser";
+import { useAppSelector } from "@/data-access/redux/hooks";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const LoginPage: React.FC = () => {
+  const router = useRouter();
+
+  if (useAppSelector(currentUserIsAuthenticated)) router.push('/dashboard/coffee')
+
   return (
     <div className="relative min-h-screen w-screen">
       <Image

@@ -5,10 +5,11 @@ import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
   reducer: {
-    currentUser: currentUserSlice,
-    checkout: checkoutSlice,
-    products: productsSlice
-  }
+    [currentUserSlice.name]: currentUserSlice.reducer,
+    [checkoutSlice.name]: checkoutSlice.reducer,
+    [productsSlice.name]: productsSlice.reducer,
+  },
+  devTools: true
 })
 
 export type RootState = ReturnType<typeof store.getState>
