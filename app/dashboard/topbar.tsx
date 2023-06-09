@@ -12,7 +12,7 @@ import Navigation from './navigation';
   const dispatch = useAppDispatch();
   const handleLeaveClick = () => {
     dispatch(logoutCurrentUser());
-    router.push('/login');
+    router.push('/');
   }
 
   return (

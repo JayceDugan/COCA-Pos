@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion'
 import { ReactNode, useId } from "react";
-import { Simulate } from "react-dom/test-utils";
 import { FieldValues, Path, UseFormRegister } from 'react-hook-form';
 import cx from "classnames";
-import input = Simulate.input;
 
 export enum InputSize {
   lg = 'lg',

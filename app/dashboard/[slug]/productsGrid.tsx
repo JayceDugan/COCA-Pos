@@ -31,7 +31,7 @@ export default function ProductsGrid() {
 
   return (
     <ul className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 p-4 bg-slate-100 pb-36">
-      { products.map((product) => <ProductsGridItem { ...product } />)}
+      { products.map((product) => <ProductsGridItem key={product.id} { ...product } />)}
     </ul>
   );
 }

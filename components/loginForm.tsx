@@ -22,26 +22,26 @@ const LoginForm: React.FC = () => {
   const router = useRouter();
   const { register, handleSubmit, watch, formState: { errors, isDirty, isValid, isSubmitting } } = useForm<LoginFormValues>({
     defaultValues: {
-      Username: '',
-      Password: ''
+      Username: 'Test User - Just Click Login',
+      Password: 'TestPassword'
     }
   });
   const dispatch = useAppDispatch();
 
-  const onSubmit: SubmitHandler<LoginFormValues> = data => {
-    return new Promise((resolve) => {
-      dispatch(setCurrentUserUsername(data.Username));
-      dispatch(setCurrentUserAuthenticated(true));
+  const onSubmit: SubmitHandler<LoginFormValues> = async (data) => {
+    dispatch(setCurrentUserUsername(data.Username));
+    dispatch(setCurrentUserAuthenticated(true));
 
-      router.push('/dashboard/coffee');
-    })
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    router.push('/dashboard/coffee');
   }
   const ValidationErrorMessage: React.FC = () => <span className="text-xs text-red-500 block mt-3">* This field is required.</span>
 
   return (
     <section>
       <h3 className="text-2xl font-semibold text-center mb-2">Login form</h3>
-      <p className="text-slate-400 text-center leading-5 md:leading-6 text-sm max-w-full w-[443px] mx-auto font-light">Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+      <p className="text-slate-400 text-center leading-5 md:leading-6 text-sm max-w-full w-[443px] mx-auto font-light">Lorem Ipsum has been the industry&apos;s standard dummy text ever since.</p>
 
       <form
         className="mt-8"
@@ -78,7 +78,7 @@ const LoginForm: React.FC = () => {
 
         <motion.button
           type="submit"
-          disabled={!isDirty || !isValid}
+          disabled={!isValid}
           className="block w-full bg-orange-500 py-4 px-10 rounded-full text-white font-bold md:mb-32 mb-10 hover:cursor-pointer hover:shadow-2xl disabled:bg-gray-300 transition-all duration-100"
           whileTap={{
             scale: 0.9
