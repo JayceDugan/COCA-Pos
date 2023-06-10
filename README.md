@@ -1,6 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# COCA POS
+
+Point of Sales |  Currently in Progress
+:-------------------------:|:-------------------------:
+![alt text](https://images.ui8.net/uploads/2_1679882564956.png) | ![alt text](https://images.ui8.net/uploads/2_1679882564959.png) 
+![alt text](https://images.ui8.net/uploads/4_1679882488305.png) | ![alt text](https://images.ui8.net/uploads/8_1679882455678.png) 
+
+## Overview
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) that creates
+the UI8 design [COCA POS](https://ui8.net/sans-design/products/coca-point-of-sales).
+
+- [View the project](https://stupendous-meerkat-396406.netlify.app/)
+- [Design files](https://ui8.net/sans-design/products/coca-point-of-sales)
 
 ## Getting Started
+
 
 First, run the development server:
 
